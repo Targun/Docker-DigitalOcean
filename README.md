@@ -148,19 +148,15 @@ docker exec -it <name of app> bash
 ```sh
 npm install forever -g
 ```
-8) Clean the front end build
-```sh
-npm run clean
-```
-9) Build a fresh copy
+9) Build a fresh copy (This also cleans)
 ```sh
 npm run build
 ```
-10) exit application
+10) Start the App using forever
+```sh
+forever start server.js
+```
+11) Exit
 ```sh
 exit
-```
-11) Start the app
-```sh
-docker exec -d <name of app> forever start server
 ```
